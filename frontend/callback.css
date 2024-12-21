@@ -1,0 +1,43 @@
+.content_area form{
+    font-size: 1.5rem;
+    background-color: blueviolet;
+    padding: 25px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content_area .input_div{
+    display: flex;
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.content_area .input_div input{
+    width: 65%;
+    border: none;
+    border-radius: 5px;
+}
+
+.content_area .input_div select{
+    font-size: 1.3rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+
+}
+.content_area textarea{
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3rem;
+}
+.content_area button{
+    font-size: 1.3rem;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}

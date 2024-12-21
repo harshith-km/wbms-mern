@@ -1,0 +1,22 @@
+/* Content area */
+.content_area form{
+    background-color: blueviolet;
+    padding: 35px;
+    /* border: 1px solid white; */
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px ;
+}
+
+.content_area form pre{
+    font-size: 1.5rem;
+}
+.content_area form button{
+    font-size: 1.6rem;
+    border: none;
+    margin-top: 10px;
+    padding: 4px;
+    border-radius: 5px;
+}
