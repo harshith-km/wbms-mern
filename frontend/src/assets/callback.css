@@ -17,13 +17,17 @@
 }
 
 .content_area .input_div input{
-    width: 65%;
+    width: 60%;
+    font-size: 1.3rem;
     border: none;
     border-radius: 5px;
+    padding: 3px 10px;
 }
 
 .content_area .input_div select{
     font-size: 1.3rem;
+    /* padding: 3px 20px; */
+    text-align: center;
     border: none;
     outline: none;
     border-radius: 5px;

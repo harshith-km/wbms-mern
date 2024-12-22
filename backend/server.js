@@ -5,12 +5,17 @@ import usersRoute from "./routes/usersRoute.js";
 import callbackRoute from "./routes/callbacksRoutes.js";
 import walletRoute from "./routes/walletsRoute.js";
 import billsRoute from "./routes/billsRoute.js";
+import cors from "cors"
+// import { getLatestStmt } from "./controllers/walletsController.js";
+// import { getLatest } from "./controllers/walletsController.js";
+
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT;
 const MONGO_URI = process.env.MONGO_URI;
 
+app.use(cors());
 // middlewares
 app.use(express.json());
 
@@ -34,3 +39,12 @@ app.use("/api/callbacks", callbackRoute);
 app.use("/api/wallet", walletRoute);
 
 app.use("/api/bills", billsRoute);
+
+// getLatest("676661a08c1d5741ed40946f")
+//     .then((data) => {
+//         const [{ balance }] = data;
+//         console.log(balance);
+//     })
+//     .catch((error) => {
+//         console.log(error);
+//     });

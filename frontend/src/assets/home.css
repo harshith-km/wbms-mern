@@ -13,6 +13,21 @@
 .content_area form pre{
     font-size: 1.5rem;
 }
+
+.paymentInp{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.content_area form select{
+    font-size: 1.5rem;
+    width: 50%;
+    border: none;
+    border-radius: 5px;
+    /* padding: 0 20px; */
+    text-align: center;
+}
 .content_area form button{
     font-size: 1.6rem;
     border: none;
@@ -20,3 +35,6 @@
     padding: 4px;
     border-radius: 5px;
 }
+
+
+

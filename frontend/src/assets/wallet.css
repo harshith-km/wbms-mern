@@ -1,0 +1,109 @@
+.content_area{
+    flex-direction: column;
+    gap: 20px;
+}
+.data{
+    width: 70%;
+    background-color: blueviolet;
+    border-radius: 15px;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.wallet_balance{
+    font-size: 1.5rem;
+    background-color: blueviolet;
+    padding: 25px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border: 1px solid white; */
+}
+.amount{
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.content_area .form{
+    font-size: 1.5rem;
+    background-color: blueviolet;
+    padding: 25px;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content_area .form input{
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+} 
+
+.content_area .form button{
+    padding: 5px;
+    font-size: 1.3rem;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+
+/* table */
+.table{
+    width: 70%;
+    background-color: white;
+    border-radius: 10px;
+    /* overflow: ; */
+}
+.thead{
+    width: 98.5%;
+
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    display: flex;
+    justify-content: space-evenly;
+}
+.thead span{
+    background-color: blueviolet;
+    padding: 15px;
+    border: 1px solid white;
+    width: 25%;
+    text-align: center;
+}   
+
+.transactions_table{
+    /* height: 200px; */
+
+    max-height: 500px;
+    width: 100%;
+
+    overflow-y: scroll;
+    border: 1px solid white;
+}
+
+.transactions_table table{
+    width: 100%;
+}
+
+.transactions_table table td{  
+    background-color: blueviolet; 
+    padding: 10px;
+    font-size: 1.3rem;
+    width: 25%;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+
+

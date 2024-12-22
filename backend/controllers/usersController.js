@@ -35,13 +35,14 @@ export const createUser = async (req, res) => {
 export const getUsers = async (req, res) => {
     try {
         const users = await User.find();
-        if (!user) {
+        if (!users) {
             return res
                 .status(404)
                 .json({ success: false, message: "user not found" });
         }
         res.status(200).json({ success: true, message: users });
     } catch (error) {
+        console.log(error);
         res.status(500).json({
             success: false,
             message: "Internal server error.",
@@ -52,13 +53,13 @@ export const getUsers = async (req, res) => {
 export const getUser = async (req, res) => {
     const { id } = req.params;
     try {
-        const users = await User.findById(id);
+        const user = await User.findById(id);
         if (!user) {
             return res
                 .status(404)
                 .json({ success: false, message: "user not found" });
         }
-        res.status(200).json({ success: true, message: users });
+        res.status(200).json({ success: true, message: user });
     } catch (error) {
         res.status(500).json({
             success: false,

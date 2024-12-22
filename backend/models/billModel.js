@@ -25,13 +25,24 @@ const billSchema = new mongoose.Schema(
         },
         amount: {
             type: Number,
-            required: true,
+            // required: true,
+            default: 0
         },
         paymentStatus: {
             type: String,
             enum: ["unpaid", "paid", "overdue"],
             default: "unpaid",
         },
+        paymentDate :{
+            type :Date , 
+            default : undefined,
+            required : false
+        },
+        paymentMode : {
+            type : String,
+            enum : ["wallet" , "UPI" , "Netbanking" ], 
+            required : false
+        }
     },
     {
         timestamps: true,
