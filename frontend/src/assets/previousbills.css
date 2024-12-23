@@ -1,0 +1,23 @@
+
+
+
+
+.modle{
+    position: fixed;
+    z-index: 1000;
+
+    font-size: 1.3rem;
+    /* border: 1px solid white; */
+    background-color: blueviolet;
+    padding: 25px;
+    border-radius: 15px;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.modle .modle_content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

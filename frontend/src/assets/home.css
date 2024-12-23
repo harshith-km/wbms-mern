@@ -1,5 +1,5 @@
 /* Content area */
-.content_area form{
+.content_area .form{
     background-color: blueviolet;
     padding: 35px;
     /* border: 1px solid white; */
@@ -10,7 +10,7 @@
     gap: 10px ;
 }
 
-.content_area form pre{
+.content_area .form pre{
     font-size: 1.5rem;
 }
 
@@ -20,16 +20,17 @@
     justify-content: space-between;
 
 }
-.content_area form select{
+.content_area .form select{
     font-size: 1.5rem;
-    width: 50%;
+    width: 40%;
     border: none;
     border-radius: 5px;
     /* padding: 0 20px; */
     text-align: center;
 }
-.content_area form button{
+.content_area .form button{
     font-size: 1.6rem;
+    font-weight: 600;
     border: none;
     margin-top: 10px;
     padding: 4px;

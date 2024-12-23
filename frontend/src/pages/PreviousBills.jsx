@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
+import "../assets/previousbills.css"
+
 
 function PreviousBills() {
   const [bills, setBills] = useState([]);
@@ -25,6 +27,10 @@ function PreviousBills() {
   function handleViewBill(index){
     setSelectedBillIndex(index)
   }
+
+  function closeModle(){
+    setSelectedBillIndex(null)
+  }
   return (
     <div className="content_area">
       {error ? (
@@ -45,17 +51,21 @@ function PreviousBills() {
 
     
     {selectedBillIndex !== null && bills[selectedBillIndex] &&(
-        <div className="moodle"> 
-            <div className="moodle_content">
-                <pre><b>Bill start on :</b> {new Date(bills[selectedBillIndex].startDate).toLocaleDateString()}</pre>
-                <pre><b>Bill ends on  :</b> {new Date(bills[selectedBillIndex].endDate).toLocaleDateString()}</pre>
+        <div className="modle"> 
+            <div className="modle_content">
+                <pre><b>Bill start on  :</b> {new Date(bills[selectedBillIndex].startDate).toLocaleDateString()}</pre>
+                <pre><b>Bill ends on   :</b> {new Date(bills[selectedBillIndex].endDate).toLocaleDateString()}</pre>
                 <hr />
-                <pre><b>Water usage   :</b> {bills[selectedBillIndex].waterUsed} L</pre>
-                <pre><b>Cost per 100L :</b> {bills[selectedBillIndex].costPer100L} Rs</pre>
+                <pre><b>Water usage    :</b> {bills[selectedBillIndex].waterUsed} L</pre>
+                <pre><b>Cost per 100L  :</b> {bills[selectedBillIndex].costPer100L} Rs</pre>
                 <hr />
-                <pre><b>Total cost    :</b> {bills[selectedBillIndex].amount} Rs</pre>
+                <pre><b>Total cost     :</b> {bills[selectedBillIndex].amount} Rs</pre>
+                <hr />
+                <pre><b>Payment Status :</b> {bills[selectedBillIndex].paymentStatus}</pre>
+                <pre><b>Payment Date   :</b> {new Date(bills[selectedBillIndex].paymentDate).toLocaleDateString() }</pre>
+                <pre><b>Payment Mode   :</b> {bills[selectedBillIndex].paymentMode} </pre>
             </div>
-            <button>Close</button>
+            <button onClick={closeModle}>Close</button>
         </div>
     )}
       
