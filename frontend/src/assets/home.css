@@ -1,6 +1,6 @@
 /* Content area */
 .content_area .form{
-    background-color: blueviolet;
+    background-color: white;
     padding: 35px;
     /* border: 1px solid white; */
     border-radius: 10px;
@@ -21,6 +21,7 @@
 
 }
 .content_area .form select{
+    background-color: rgb(200,200,200);
     font-size: 1.5rem;
     width: 40%;
     border: none;
@@ -46,7 +47,6 @@
 .dashboardLink{
     background-color: blue;
 }
-
 
 .noDueBills{
     background-color: white;

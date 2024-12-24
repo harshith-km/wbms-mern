@@ -49,7 +49,7 @@ function Wallet() {
     <div className="content_area">
         <div className="data">
             <div className="wallet_balance">
-                <span> <b>Your current wallet Balance :</b></span>
+                <span> <b>current wallet Balance :</b></span>
                 <span className="amount">{walletData && walletData.length > 0 ? walletData[0].balance : 0} Rs</span> 
             </div>
             <div className="walletForm">
