@@ -1,39 +1,3 @@
-// import { useState } from 'react'
-// import './assets/style.css'
-// import "./index.css"
-
-// import {BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
-// import Footer from "./components/Footer";
-// import Header from "./components/Header";
-// import Callback from "./pages/Callback";
-// import Home from "./pages/Home";
-// import Wallet from "./pages/Wallet";
-// import Navbar from "./components/Navbar";
-
-
-// function App(){
-
-//   return (
-//   <div className="body">
-//     <Header />
-//       <main>
-//         <Navbar />
-//         <Router>
-//           <Routes>
-//             <Route path="/" element={<Home />}/>
-//             <Route path="/wallet" element={<Wallet />} />
-//             <Route path="/callback-requests" element={<Callback />} />
-//           </Routes>
-//         </Router>
-//       </main>
-//       <Footer />
-//   </div>) 
-  
-// }
-
-// export default App;
-
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './index.css'; 
 
@@ -45,6 +9,7 @@ import Wallet from "./pages/Wallet";
 import Navbar from "./components/Navbar";
 import PreviousBills from './pages/PreviousBills';
 import UsageAnalytics from './pages/UsageAnalytics';
+import Settings from './pages/Settings';
 
 
 function App() {
@@ -60,6 +25,7 @@ function App() {
             <Route path="/callback-request" element={<Callback />} />
             <Route path="/previous-bills" element={<PreviousBills />} />
             <Route path="/usage-analytics" element={<UsageAnalytics />} />
+            <Route path='/settings' element={<Settings />} /> 
             {/* Add other routes here */}
           </Routes>
         </main>

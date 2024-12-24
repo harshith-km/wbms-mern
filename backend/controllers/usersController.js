@@ -53,13 +53,13 @@ export const getUsers = async (req, res) => {
 export const getUser = async (req, res) => {
     const { id } = req.params;
     try {
-        const user = await User.findById(id);
+        const user = await User.findById(id, { password: false });
         if (!user) {
             return res
                 .status(404)
                 .json({ success: false, message: "user not found" });
         }
-        res.status(200).json({ success: true, message: user });
+        res.status(200).json(user);
     } catch (error) {
         res.status(500).json({
             success: false,

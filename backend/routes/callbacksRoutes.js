@@ -9,8 +9,8 @@ import {
 
 const router = express.Router();
 
-router.get("/", getAllCallbacks);
-router.get("/:id", getCallbacks);
+router.get("/", getAllCallbacks); //for admin
+router.get("/:id", getCallbacks); // for user
 router.post("/", createCallback);
 router.put("/:id", updateCallback);
 router.delete("/", deleteCallback);

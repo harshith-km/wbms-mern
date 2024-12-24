@@ -6,6 +6,10 @@
   overflow: hidden;
   /* color: white; */
 }
+button:hover{
+  cursor: pointer;
+}
+
 .body{
   height: 100vh;
   width: 100vw;

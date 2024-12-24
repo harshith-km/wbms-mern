@@ -3,10 +3,10 @@ import { Callbacks } from "../models/callbackModel.js";
 export const createCallback = async (req, res) => {
     try {
         const callback = await Callbacks.create(req.body);
-        res.status(200).json({ success: true, message: callback });
+        res.status(200).json(callback);
     } catch (error) {
+        console.log(error);
         res.status(500).json({
-            success: false,
             message: "internal server error",
         });
     }
@@ -23,10 +23,9 @@ export const getCallbacks = async (req, res) => {
                 message: "callback request not found",
             });
         }
-        res.status(200).json({ success: true, message: callback });
+        res.status(200).json(callback);
     } catch (error) {
         res.status(500).json({
-            success: false,
             message: "internal server error",
         });
     }

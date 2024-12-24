@@ -78,7 +78,7 @@ function Wallet() {
                         walletData.map((stmt, index) => (
                         <tr key={index}>
                             <td>
-                            {new Date(stmt.transactionDate).toLocaleDateString()} 
+                            {new Date(stmt.transactionDate).toLocaleDateString('en-In', { day: "2-digit" , month:"short", year:"numeric"})} 
                             </td>
                             <td>{stmt.credit}</td>
                             <td>{stmt.debit}</td>

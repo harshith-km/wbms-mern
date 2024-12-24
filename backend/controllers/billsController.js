@@ -138,3 +138,29 @@ export const getPaidBills = async (req, res) => {
 
 //     }
 // }
+
+export const getUsage = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const bills = await Bill.find(
+            { user_id: id },
+            { _id: false, startDate: true, waterUsed: true }
+        )
+            .sort({ startDate: -1 })
+            .limit(10);
+
+        const chartData = bills.map((bill) => ({
+            date: new Date(bill.startDate).toLocaleDateString("en-US", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric",
+            }),
+            waterUsed: bill.waterUsed,
+        }));
+        console.log(chartData);
+        res.status(200).json(chartData);
+    } catch (error) {
+        console.log(error);
+        res.status(500).json(error);
+    }
+};

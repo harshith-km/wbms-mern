@@ -68,7 +68,10 @@ function Home() {
 					</div>
 				))
 			) : (
-				<h1>There are no due bills</h1>
+				<>
+					<h1>There are no due bills</h1>
+					<pre className="star_rating">⭐  ⭐  ⭐</pre>
+				</>
 			)}
 		</div>
 	);

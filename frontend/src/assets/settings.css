@@ -1,0 +1,24 @@
+.profileUpdateForm{
+    padding: 25px;
+    /* border: 2px solid white; */
+    background-color: blueviolet;
+    border-radius: 15px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.profileUpdateForm label{
+    font-size: 1.5rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.profileUpdateForm label input{
+    font-size: 1.4rem;
+    padding: 3px 10px;
+    border: none;
+    border-radius: 5px;
+}

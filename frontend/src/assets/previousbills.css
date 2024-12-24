@@ -1,5 +1,12 @@
 
-
+.content_area .preBillBtn{
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 5px  20px;
+    cursor: pointer;
+    width: 100%;
+    text-align: start;
+}
 
 
 .modle{
@@ -7,7 +14,6 @@
     z-index: 1000;
 
     font-size: 1.3rem;
-    /* border: 1px solid white; */
     background-color: blueviolet;
     padding: 25px;
     border-radius: 15px;

@@ -40,7 +40,10 @@ function PreviousBills() {
           {bills.map((bill, index) => (
             <li key={bill._id}>
               {bill.paymentDate && (
-                <button onClick={()=>handleViewBill(index)}>Paid on: {new Date(bill.paymentDate).toLocaleDateString()}</button>
+                <button onClick={()=>handleViewBill(index)} className="preBillBtn">
+                  <pre> Start : {new Date(bill.startDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</pre> 
+                  <pre> End   : {new Date(bill.endDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</pre>
+                </button>
               )}
             </li>
           ))}

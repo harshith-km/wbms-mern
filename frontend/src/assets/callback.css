@@ -1,4 +1,5 @@
-.content_area form{
+
+.callbackForm{
     font-size: 1.5rem;
     background-color: blueviolet;
     padding: 25px;
@@ -6,17 +7,17 @@
 
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
 }
 
-.content_area .input_div{
+ .content_area .callbackForm .input_div{
     display: flex;
     justify-content: space-between;
 
-    gap: 10px;
-}
+    /* gap: 10px; */
+} 
 
-.content_area .input_div input{
+ .content_area .input_div input{
     width: 60%;
     font-size: 1.3rem;
     border: none;
@@ -26,7 +27,6 @@
 
 .content_area .input_div select{
     font-size: 1.3rem;
-    /* padding: 3px 20px; */
     text-align: center;
     border: none;
     outline: none;
@@ -44,4 +44,40 @@
     border: none;
     border-radius: 5px;
     margin-top: 5px;
+}
+
+
+.callbacks{
+    /* margin-top: 90px; */
+    /* border: 4px solid white; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.callbacks table{
+    background-color: blueviolet;
+    border-radius: 15px;
+}
+.callbacks table th, .callbacks table td{
+    font-size: 1.2rem;
+    padding: 10px;
+} 
+.callbacks table tbody tr td button{
+    font-size: 1.2rem;
+    padding: 3px 15px;
+}
+
+.applicationId{
+    background-color: blueviolet;
+    padding: 25px;
+    border-radius: 10px;
+
+}
+.applicationId button{
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+
+    margin-top: 10px;
 }
