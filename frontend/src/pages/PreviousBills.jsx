@@ -36,18 +36,25 @@ function PreviousBills() {
       {error ? (
         <p className="error-message">Error fetching bills: {error.message}</p>
       ) : bills.length > 0 ? (
-        <ul>
+        <>
+        <h1>Previouly paid bills :</h1>
+        <div className="billsContainer">
+        
+        <ul className="bills">
           {bills.map((bill, index) => (
-            <li key={bill._id}>
-              {bill.paymentDate && (
-                <button onClick={()=>handleViewBill(index)} className="preBillBtn">
-                  <pre> Start : {new Date(bill.startDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</pre> 
-                  <pre> End   : {new Date(bill.endDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</pre>
-                </button>
-              )}
+            <li key={bill._id} className="eachItem">
+              <button onClick={()=>handleViewBill(index)} className="preBillBtn">
+                <pre> Start : {new Date(bill.startDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</pre> 
+                <pre> End   : {new Date(bill.endDate).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })}</pre>
+              </button>
+              <button onClick={()=>handleViewBill(index)} className="viewBillBtn">
+                View Bill
+              </button>
             </li>
           ))}
         </ul>
+        </div>
+        </>
       ) : (
         <p>There are no previous bills.</p>
       )}

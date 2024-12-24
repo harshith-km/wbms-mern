@@ -41,9 +41,9 @@ function Home() {
 	}
 	return (
 		<div className="content_area">
-			<div className="bills">
+			{/* <div className="bills">
 
-			</div>
+			</div> */}
 			{error ? (
 				<p className="error-message">Error fetching bills: {error.message}</p>
 			) : bills && bills.length > 0 ? (
@@ -68,10 +68,10 @@ function Home() {
 					</div>
 				))
 			) : (
-				<>
+				<div className="noDueBills">
 					<h1>There are no due bills</h1>
 					<pre className="star_rating">⭐  ⭐  ⭐</pre>
-				</>
+				</div>
 			)}
 		</div>
 	);

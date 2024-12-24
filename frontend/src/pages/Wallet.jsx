@@ -52,7 +52,7 @@ function Wallet() {
                 <span> <b>Your current wallet Balance :</b></span>
                 <span className="amount">{walletData && walletData.length > 0 ? walletData[0].balance : 0} Rs</span> 
             </div>
-            <div className="form">
+            <div className="walletForm">
                 <span>Minimum amount is 100 rs</span>
                 <input 
                 type="number" 

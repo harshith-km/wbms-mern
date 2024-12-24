@@ -1,7 +1,8 @@
 .profileUpdateForm{
     padding: 25px;
     /* border: 2px solid white; */
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+    background-color: white;
     border-radius: 15px;
 
     display: flex;
@@ -21,4 +22,5 @@
     padding: 3px 10px;
     border: none;
     border-radius: 5px;
+    background-color: rgb(220, 220, 220);
 }

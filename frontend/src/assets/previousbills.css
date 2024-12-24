@@ -1,20 +1,51 @@
+.billsContainer{
+    width:30% ;
+    /* height: 75%; */
+    max-height: 75%;
+    /* border: 2px solid red; */
+    /* max-height: 100px; */
+    overflow-y: auto;
+    background-color: white;
+    border-radius: 15px;
 
-.content_area .preBillBtn{
-    font-size: 1.5rem;
-    font-weight: 600;
-    padding: 5px  20px;
-    cursor: pointer;
+
+}
+.bills{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    gap: 10px;
     text-align: start;
+    /* max-height: 100px; */
+    
 }
 
+.bills .eachItem{
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    width: 100%;
+   
+}
+.preBillBtn{
+    text-align: start;
+    font-weight: 500;
+    background-color: rgb(200, 200, 200);
+    width: 70%;
+}
+.viewBillBtn{
+    width:30%;
+    font-weight: 600;
+}
 
 .modle{
     position: fixed;
     z-index: 1000;
 
     font-size: 1.3rem;
-    background-color: blueviolet;
+    background-color: white;
     padding: 25px;
     border-radius: 15px;
     
@@ -27,3 +58,4 @@
     flex-direction: column;
     gap: 10px;
 }
+

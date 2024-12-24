@@ -1,7 +1,7 @@
 
 .callbackForm{
     font-size: 1.5rem;
-    background-color: blueviolet;
+    background-color: white;
     padding: 25px;
     border-radius: 15px;
 
@@ -20,6 +20,7 @@
  .content_area .input_div input{
     width: 60%;
     font-size: 1.3rem;
+    background-color: rgb(220, 220, 220);
     border: none;
     border-radius: 5px;
     padding: 3px 10px;
@@ -34,6 +35,7 @@
 
 }
 .content_area textarea{
+    background-color: rgb(220, 220, 220);
     border: none;
     border-radius: 5px;
     font-size: 1.3rem;
@@ -50,14 +52,22 @@
 .callbacks{
     /* margin-top: 90px; */
     /* border: 4px solid white; */
-    width: 100%;
+    width: 80%;
     display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* background-color: white; */
     justify-content: center;
+    align-items: center;
+    /* background-color: white; */
 }
 
 .callbacks table{
-    background-color: blueviolet;
+    background-color: white;
     border-radius: 15px;
+}
+tbody{
+    height: 100px;
 }
 .callbacks table th, .callbacks table td{
     font-size: 1.2rem;
@@ -69,7 +79,8 @@
 }
 
 .applicationId{
-    background-color: blueviolet;
+    width: fit-content;
+    background-color: white;
     padding: 25px;
     border-radius: 10px;
 
@@ -80,4 +91,9 @@
     font-weight: 500;
 
     margin-top: 10px;
+}
+
+.closeBtn{
+    padding: 10px 25px;
+    width: 20%;
 }

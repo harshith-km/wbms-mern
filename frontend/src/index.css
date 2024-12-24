@@ -4,10 +4,20 @@
   box-sizing: border-box;
   text-decoration: none;
   overflow: hidden;
-  /* color: white; */
+  color: black;
+}
+button{
+  background-color: gray;
+  color: white;
 }
 button:hover{
   cursor: pointer;
+}
+
+:root{
+  --primary-background-color: white;
+  --secondary-background-color : rgb(220, 220, 220);
+  --body-background-color : rgb(180,180,180);
 }
 
 .body{
@@ -19,8 +29,7 @@ button:hover{
   justify-content: center;
   align-items: center;
   gap: 5px;
-  background-color: rgb(56, 86, 86);
-  /* border:  5px solid red; */
+  background-color: var(--body-background-color);
 }
 
 /* Login and register */
@@ -63,10 +72,11 @@ button:hover{
 
 /* Heaader */
 header{
-  color: white;
+  background-color: var(--secondary-background-color);
+  color: black;
   height: 10vh;
   width: 100%;
-  border: 1px groove white;
+  /* border: 1px groove white; */
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px ;
   
@@ -84,9 +94,6 @@ header h1 img{
 main{
   height: 82vh;
   width: 100%;
-  /* padding: 5px; */
-  /* border: 1px groove white; */
-  
 
   border-radius: 15px;
 
@@ -96,9 +103,7 @@ main{
 
 nav{
   width: 25%;
-  border-top: 1px groove white;
-  border-bottom: 1px groove white;
-  border-right: 1px groove white;
+  color: black;
 
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -109,11 +114,8 @@ nav{
 }
 
 .content_area{
-  color: white;
+  background-color: var(--secondary-background-color);
   width: 80%;
-  border-top: 1px groove white;
-  border-bottom: 1px groove white;
-  border-left: 1px groove white;
 
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -124,9 +126,9 @@ nav{
 }
 
 footer{
+  background-color: var(--secondary-background-color);
   height: 8vh;
   width: 100%;
-  border: 1px groove white;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px ;
 
@@ -136,14 +138,11 @@ footer{
   align-items: center;
 }
 
-
-
-
 /* nav */
 .profile{
   width: 100%;
   height: 25%;    
-  background-color: blueviolet;
+  background-color: var(--secondary-background-color);
   padding: 15px;
   display: flex;
   flex-direction: column;
@@ -154,8 +153,9 @@ footer{
 }
 
 .navigation{
+  color: black;
   height: 60%;
-  background-color: blueviolet;
+  background-color: var(--secondary-background-color);
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -164,8 +164,9 @@ footer{
 }
 
 .setting_and_logout{
+  color: black;
   height: 15%;
-  background-color: blueviolet;
+  background-color: var(--secondary-background-color);
 
   display: flex;
   justify-content: space-evenly;
@@ -187,7 +188,7 @@ footer{
 .avatar{
   width: 130px;
   height: 130px;
-  background-color: gray;
+  background-color: var(--primary-background-color);
   border-radius: 50%;
 }
 .name_and_email{
@@ -229,9 +230,10 @@ footer{
 /* navigation */
 .navigation a{
   width: 80%;
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  background-color: white;
   height: 10%;
-  color: white;
+  /* color: white; */
   padding: 20px;
   font-size: 2rem;
   font-weight: 400;
@@ -256,7 +258,8 @@ footer{
 .setting_and_logout a{
   display: flex;
   flex-direction: column;
-  color: white;
+  /* color: white; */
+  background-color: white;
   align-items: center;
   font-size: 2rem;
   padding: 10px 15px;
@@ -281,15 +284,26 @@ footer{
 
 .contact_us, .follow_us{
   font-size: 1.3rem;
-  color: white;
+  /* color: white; */
   display: flex;
   transition: all 0.4s ease;
   gap: 15px;
 }
 footer a{
-  color: white;
+  /* color: white; */
 }
 
 .follow_us a:hover{
   text-decoration: underline;
+}
+
+
+.active {
+  border: 3px solid black;
+  /* Add other styling for active links, if desired (e.g., background color) */
+}
+
+.setting_and_logout .active{
+  border: 3px solid black;
+
 }

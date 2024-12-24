@@ -42,3 +42,15 @@
 .star_rating{
     font-size: 1.9rem;
 }
+
+.dashboardLink{
+    background-color: blue;
+}
+
+
+.noDueBills{
+    background-color: white;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}

@@ -4,7 +4,8 @@
 }
 .data{
     width: 70%;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
+    background-color: white;
     border-radius: 15px;
 
 
@@ -15,13 +16,15 @@
 
 
 .wallet_balance{
+    height: 100%;
     font-size: 1.5rem;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     padding: 25px;
     border-radius: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     /* border: 1px solid white; */
 }
 .amount{
@@ -29,9 +32,9 @@
     font-weight: 800;
 }
 
-.content_area .form{
+.content_area .walletForm{
     font-size: 1.5rem;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     padding: 25px;
     border-radius: 15px;
 
@@ -40,8 +43,9 @@
     gap: 10px;
 }
 
-.content_area .form input{
+.content_area .walletForm input{
     padding: 5px 10px;
+    background-color: rgb(220, 220, 220);
     font-size: 1.2rem;
     border: none;
     border-radius: 5px;
@@ -72,9 +76,11 @@
 
     display: flex;
     justify-content: space-evenly;
+
+    border-bottom: 2px solid black;
 }
 .thead span{
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
     padding: 15px;
     border: 1px solid white;
     width: 25%;
@@ -88,21 +94,23 @@
     width: 100%;
 
     overflow-y: scroll;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .transactions_table table{
     width: 100%;
 }
 
+
 .transactions_table table td{  
-    background-color: blueviolet; 
+    /* background-color: blueviolet;  */
     padding: 10px;
     font-size: 1.3rem;
     width: 25%;
     text-align: center;
-    border: 1px solid white;
-    border-radius: 5px;
+    /* border: 1px solid white; */
+    border-bottom: 1px solid gray;
+    /* border-radius: 5px; */
 }
 
 

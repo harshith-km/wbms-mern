@@ -7,6 +7,7 @@ function Callback(){
     const [form , setForm] = useState({user_id :"676661a08c1d5741ed40946f", userName:"" , phoneNO:"", address:"", problem:"", problemDescription:"" })
     const [callbacks, setCallbacks] = useState(null)
     const [applicationId , setApplicationId] = useState(null)
+    const [div, setDiv] = useState(null)
 
     useEffect(() =>{
         axios   
@@ -44,7 +45,50 @@ function Callback(){
       };
     return(
             <div className="content_area">
-                <div className="callbackForm">
+                {div ? (
+                    <div className="callbacks">
+                        {applicationId && applicationId !== null ? (
+                            <div className="applicationId">
+                                <h3>{applicationId}</h3>
+                                <button onClick={()=>setApplicationId(null)}>Close</button>
+                            </div>
+                        ) : (
+                            callbacks && callbacks.length > 0 ? (
+                                <table border={1}>
+                                    <thead>
+                                        <tr>
+                                            <th>User Name</th>
+                                            <th>Phone No</th>
+                                            <th>Address</th>
+                                            <th>Problem</th>
+                                            <th>Problem Description</th>
+                                            <th>Status</th>
+                                            <th>Operations</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        {callbacks.map((callback, index) => (
+                                        <tr key={index}>
+                                            <td>{callback.userName}</td>
+                                            <td>{callback.phoneNO}</td>
+                                            <td>{callback.address}</td>
+                                            <td>{callback.problem}</td>
+                                            <td>{callback.problemDescription.slice(0,20)}{callback.problemDescription.length >10 && "..."}</td>
+                                            <td style={cellStyles[callback.state] || {}}>{callback.state}</td>
+                                            <td><button onClick={()=>setApplicationId(callback._id)}>View Application ID</button></td>
+                                        </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            ) : (
+                                <h3>No callbacks found</h3>
+                            )
+                        )}
+                        <button className="closeBtn" onClick={() =>setDiv(false)}>Close</button>
+                </div>
+                ): (
+                    <>
+                    <div className="callbackForm">
                     <div className="input_div">
                         <label>Name : </label>
                         <input 
@@ -82,47 +126,12 @@ function Callback(){
 
                     <button onClick={submitForm}>Request callback</button>
                 </div>
+                <button onClick={()=>setDiv(true)}>Show Callback</button>
+                </>
+                ) }
+                
 
-                <div className="callbacks">
-                    {applicationId && applicationId !== null ? (
-                        <div className="applicationId">
-                            <h3>{applicationId}</h3>
-                            <button onClick={()=>setApplicationId(null)}>Close</button>
-                        </div>
-                    ) : (
-                        callbacks && callbacks.length > 0 ? (
-                            <table border={2}>
-                            <thead>
-                                <tr>
-                                    <th>User Name</th>
-                                    <th>Phone No</th>
-                                    <th>Address</th>
-                                    <th>Problem</th>
-                                    <th>Problem Description</th>
-                                    <th>Status</th>
-                                    <th>Operations</th>
-                                </tr>
-                             </thead>
-                            <tbody>
-                                {callbacks.map((callback, index) => (
-                                <tr key={index}>
-                                    <td>{callback.userName}</td>
-                                    <td>{callback.phoneNO}</td>
-                                    <td>{callback.address}</td>
-                                    <td>{callback.problem}</td>
-                                    <td>{callback.problemDescription.slice(0,20)}{callback.problemDescription.length >10 && "..."}</td>
-                                    <td style={cellStyles[callback.state] || {}}>{callback.state}</td>
-                                    <td><button onClick={()=>setApplicationId(callback._id)}>View Application ID</button></td>
-                                </tr>
-                                ))}
-                            </tbody>
-                            </table>
-                        ) : (
-                            <h3>No callbacks found</h3>
-                        )
-                    )}
-                    
-                    </div>
+                
             </div>
     );
 }
